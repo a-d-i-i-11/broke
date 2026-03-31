@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="center">
+
+<div class="card">
+
+<h2 id="title">Login</h2>
+
+<input id="name" placeholder="Name" style="display:none">
+<input id="email" placeholder="Email">
+<input id="pass" type="password" placeholder="Password">
+
+<button class="btn" onclick="go()">Continue</button>
+
+<p onclick="toggle()" style="margin-top:10px;cursor:pointer;color:#60a5fa">
+Switch to Signup
+</p>
+
+</div>
+
+</div>
+
+<script>
+let signup=false;
+
+function toggle(){
+  signup=!signup;
+  document.getElementById('title').innerText=signup?"Signup":"Login";
+  document.getElementById('name').style.display=signup?"block":"none";
+}
+
+function go(){
+  window.location.href="dashboard.html";
+}
+</script>
+
+</body>
+</html>

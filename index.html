@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Broke-O-Meter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="welcome">💸 Welcome to Money Control</div>
+<div class="cursor"></div>
+
+<nav>
+<h1>Broke-O-Meter </h1>
+<a href="login.html"><button class="btn">Login</button></a>
+</nav>
+<section class="hero">
+  <h1>Stop being <span>broke</span></h1>
+
+  <p>Track your money smartly</p>
+
+  <div class="sub-text">
+    Take control. Build discipline. Grow your wealth.
+  </div>
+
+  <a href="login.html">
+    <button class="btn">Get Started</button>
+  </a>
+</section>
+
+<h2 style="text-align:center;">Our Team</h2>
+
+<div class="director-grid">
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front"><img src="images/lolo.jpg"></div>
+<div class="flip-back"><h3>nahoko</h3><p>Frontend</p></div>
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front"><img src="images/simran.jpeg.jpeg"></div>
+<div class="flip-back"><h3>Simran</h3><p>UI/UX</p></div>
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front"><img src="images/bolo.jpg"></div>
+<div class="flip-back"><h3>jiro</h3><p>Backend</p></div>
+</div>
+</div>
+
+</div>
+
+<script>
+/* CURSOR */
+const cursor=document.querySelector('.cursor');
+document.addEventListener('mousemove',e=>{
+  cursor.style.left=e.clientX+'px';
+  cursor.style.top=e.clientY+'px';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js" defer></script>
+</head>
+
+<body>
+
+<div class="app modern">
+
+<!-- SIDEBAR -->
+<div class="sidebar modern-sidebar">
+<h2>💸 BOM</h2>
+
+<a href="#">🏠 Dashboard</a>
+<a href="#">📊 Reports</a>
+<a href="#">⚙ Settings</a>
+<a href="index.html">🚪 Logout</a>
+</div>
+
+<!-- MAIN -->
+<div class="main modern-main">
+
+<h1 class="title">Dashboard</h1>
+
+<!-- TOP CARDS -->
+<div class="top-cards">
+
+<div class="top-card">
+<p>Total Income</p>
+<h2 id="inc">₹0</h2>
+</div>
+
+<div class="top-card active">
+<p>Total Expense</p>
+<h2 id="exp">₹0</h2>
+</div>
+
+<div class="top-card">
+<p>Balance</p>
+<h2 id="bal">₹0</h2>
+</div>
+
+</div>
+
+<!-- GRID -->
+<div class="modern-grid">
+
+<!-- FORM -->
+<div class="card">
+<h3>Add Transaction</h3>
+
+<input id="desc" placeholder="Description">
+<input id="amt" type="number" placeholder="Amount">
+
+<select id="cat">
+<option>Food</option>
+<option>Salary</option>
+<option>Travel</option>
+<option>Shopping</option>
+</select>
+
+<button class="btn full" onclick="add()">Add Transaction</button>
+</div>
+
+<!-- CHART -->
+<div class="card">
+<h3>Overview</h3>
+<canvas id="chart"></canvas>
+</div>
+
+</div>
+
+<!-- HISTORY -->
+<div class="card" style="margin-top:30px;">
+<h3>Recent Transactions</h3>
+
+<table class="history-table">
+<thead>
+<tr>
+<th>Description</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody id="history"></tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
