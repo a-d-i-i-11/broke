@@ -7,13 +7,18 @@
 
 <body>
 
+<!-- WELCOME -->
 <div id="welcome">💸 Welcome to Money Control</div>
+<!-- CURSOR -->
 <div class="cursor"></div>
 
-<nav>
-<h1>Broke-O-Meter </h1>
-<a href="login.html"><button class="btn">Login</button></a>
+<!-- NAV -->
+<nav class="nav-bar">
+  <h1>Broke-O-Meter 🚀</h1>
+  <a href="login.html" class="login-btn">Login</a>
 </nav>
+
+<!-- HERO -->
 <section class="hero">
   <h1>Stop being <span>broke</span></h1>
 
@@ -24,44 +29,69 @@
   </div>
 
   <a href="login.html">
-    <button class="btn">Get Started</button>
+    <button class="btn hero-btn">Get Started</button>
   </a>
 </section>
 
-<h2 style="text-align:center;">Our Team</h2>
+<!-- TEAM -->
+<section class="team-section">
+  <h2>Our Team</h2>
 
-<div class="director-grid">
+  <div class="director-grid">
 
-<div class="flip-card">
-<div class="flip-inner">
-<div class="flip-front"><img src="lolo.jpg"></div>
-<div class="flip-back"><h3>nahoko</h3><p>Frontend</p></div>
-</div>
-</div>
+    <!-- CARD 1 -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/lolo.jpg">
+        </div>
+        <div class="flip-back">
+          <h3>Nahoko</h3>
+          <p>Frontend</p>
+        </div>
+      </div>
+    </div>
 
-<div class="flip-card">
-<div class="flip-inner">
-<div class="flip-front"><img src="simran.jpeg.jpeg"></div>
-<div class="flip-back"><h3>Simran</h3><p>UI/UX</p></div>
-</div>
-</div>
+    <!-- CARD 2 -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/simran.jpeg.jpeg">
+        </div>
+        <div class="flip-back">
+          <h3>Simran</h3>
+          <p>UI/UX</p>
+        </div>
+      </div>
+    </div>
 
-<div class="flip-card">
-<div class="flip-inner">
-<div class="flip-front"><img src="bolo.jpg"></div>
-<div class="flip-back"><h3>jiro</h3><p>Backend</p></div>
-</div>
-</div>
+    <!-- CARD 3 -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/bolo.jpg">
+        </div>
+        <div class="flip-back">
+          <h3>Jiro</h3>
+          <p>Backend</p>
+        </div>
+      </div>
+    </div>
 
-</div>
+  </div>
+</section>
 
+<!-- SCRIPT -->
 <script>
-/* CURSOR */
-const cursor=document.querySelector('.cursor');
-document.addEventListener('mousemove',e=>{
-  cursor.style.left=e.clientX+'px';
-  cursor.style.top=e.clientY+'px';
+
+/* CURSOR EFFECT */
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 });
+
 </script>
 
 </body>
