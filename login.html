@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>Login - Money Control</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="center">
+<div class="auth-container">
 
-<div class="card">
+  <!-- LOGIN BOX -->
+  <div class="auth-box" id="loginBox">
+    <h2>Welcome Back</h2>
+    <p class="auth-sub">Login to continue</p>
 
-<h2 id="title">Login</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
 
-<input id="name" placeholder="Name" style="display:none">
-<input id="email" placeholder="Email">
-<input id="pass" type="password" placeholder="Password">
+    <!-- ✅ FIXED BUTTON -->
+    <button class="btn full" onclick="login()">Continue</button>
 
-<button class="btn" onclick="go()">Continue</button>
+    <p class="switch">
+      Don't have an account? 
+      <span onclick="showSignup()">Sign up</span>
+    </p>
+  </div>
 
-<p onclick="toggle()" style="margin-top:10px;cursor:pointer;color:#60a5fa">
-Switch to Signup
-</p>
+  <!-- SIGNUP BOX -->
+  <div class="auth-box hidden" id="signupBox">
+    <h2>Create Account</h2>
+    <p class="auth-sub">Start your journey</p>
+
+    <input type="text" placeholder="Full Name">
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <!-- ✅ SAME BUTTON -->
+    <button class="btn full" onclick="login()">Continue</button>
+
+    <p class="switch">
+      Already have an account? 
+      <span onclick="showLogin()">Login</span>
+    </p>
+  </div>
 
 </div>
 
-</div>
-
+<!-- ✅ CLEAN SCRIPT (ONLY ONE) -->
 <script>
-let signup=false;
-
-function toggle(){
-  signup=!signup;
-  document.getElementById('title').innerText=signup?"Signup":"Login";
-  document.getElementById('name').style.display=signup?"block":"none";
+function showSignup(){
+  document.getElementById("loginBox").classList.add("hidden");
+  document.getElementById("signupBox").classList.remove("hidden");
 }
 
-function go(){
-  window.location.href="dashboard.html";
+function showLogin(){
+  document.getElementById("signupBox").classList.add("hidden");
+  document.getElementById("loginBox").classList.remove("hidden");
+}
+
+/* 🔥 LOGIN REDIRECT */
+function login(){
+  window.location.href = "dashboard.html";
 }
 </script>
 
